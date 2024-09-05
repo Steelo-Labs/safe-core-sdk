@@ -12,8 +12,8 @@ interface Config {
 }
 
 const config: Config = {
-  CHAIN_ID: 11155111n,
-  RPC_URL: 'https://sepolia.gateway.tenderly.co',
+  CHAIN_ID: 2442n,
+  RPC_URL: 'https://polygonzkevm-cardona.g.alchemy.com', // Updated to Polygon zkEVM Cardona testnet RPC URL
   SIGNER_ADDRESS_PRIVATE_KEY: '<SIGNER_ADDRESS_PRIVATE_KEY>',
   SAFE_ADDRESS: '<SAFE_ADDRESS>',
   SAFE_TX_HASH: '<SAFE_TX_HASH>'

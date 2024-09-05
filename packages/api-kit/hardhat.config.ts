@@ -28,7 +28,7 @@ if (PK) {
 }
 
 const config: HardhatUserConfig = {
-  defaultNetwork: 'sepolia',
+  defaultNetwork: 'polygonCardonaZkEvmTestnet',
   paths: {
     tests: TESTS_PATH
   },
@@ -38,14 +38,15 @@ const config: HardhatUserConfig = {
       blockGasLimit: 100000000,
       gas: 100000000
     },
-    sepolia: {
+    polygonCardonaZkEvmTestnet: {
       ...sharedNetworkConfig,
-      url: 'https://sepolia.gateway.tenderly.co'
+      url: 'https://polygonzkevm-cardona.g.alchemy.com',
+      chainId: 2442,
+      gasPrice: 1000000000
     }
   },
-  //@ts-expect-error Type not found
   compilerOptions: {
-    paths: { '^@safe-global/protocol-kit/(.*)$': ['../protocol-kit/src/*'] }
+    paths: { '@safe-global/protocol-kit/(.*)': ['../protocol-kit/src/*'] }
   }
 }
 

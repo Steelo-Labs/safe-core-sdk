@@ -11,7 +11,7 @@ import { SafeVersion } from '@safe-global/safe-core-sdk-types'
 const config: Config = {
   // REQUIRED PARAMETERS
   owners: ['0x680cde08860141F9D223cE4E620B10Cd6741037E'],
-  rpcUrl: 'https://sepolia.gateway.tenderly.co',
+  rpcUrl: 'https://polygonzkevm-cardona.g.alchemy.com', // Updated to Polygon zkEVM Cardona testnet RPC URL
   // OPTIONAL PARAMETERS
   pattern: '0x5afe',
   safeVersion: '1.3.0',
@@ -47,9 +47,9 @@ async function generateSafeAddresses() {
     })
 
     // we print a message in the console with some data about the performance
-    printPerfomanceMessage(iteractions, saltNonce)
+    printPerformanceMessage(iteractions, saltNonce)
 
-    // we check if its a valid address based on the provided pattern
+    // we check if it's a valid address based on the provided pattern
     const isValidAddress = checkAddressPattern(predictedSafeAddress)
 
     if (isValidAddress) {
@@ -99,7 +99,7 @@ function printFirstMessage(): void {
 }
 
 // used to print the performance message
-function printPerfomanceMessage(addresses: number, saltNonce: number): void {
+function printPerformanceMessage(addresses: number, saltNonce: number): void {
   const seconds = (Date.now() - start) / 1000
   const addressesPerSecond = (addresses / seconds).toFixed(8)
 

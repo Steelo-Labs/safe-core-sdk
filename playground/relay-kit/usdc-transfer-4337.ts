@@ -9,15 +9,15 @@ const PIMLICO_API_KEY = ''
 // Safe 4337 compatible
 const SAFE_ADDRESS = ''
 
-// Bundler URL
-const BUNDLER_URL = `https://api.pimlico.io/v2/sepolia/rpc?apikey=${PIMLICO_API_KEY}` // PIMLICO
+// Bundler URL - @Ezra -> TO CHECK
+const BUNDLER_URL = `https://api.pimlico.io/v2/cardona/rpc?apikey=${PIMLICO_API_KEY}` // PIMLICO
 
 // RPC URL
-const RPC_URL = 'https://sepolia.gateway.tenderly.co'
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com'
 
-const CHAIN_NAME = 'sepolia'
+const CHAIN_NAME = 'cardona'
 
-// USDC CONTRACT ADDRESS IN SEPOLIA
+// USDC CONTRACT ADDRESS IN CARDONA - @Ezra -> TO CHECK
 // faucet: https://faucet.circle.com/
 const usdcTokenAddress = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238'
 

@@ -6,6 +6,7 @@ export const TRANSACTION_SERVICE_URLS: Record<string, string> = {
   '137': 'https://safe-transaction-polygon.safe.global',
   '324': 'https://safe-transaction-zksync.safe.global',
   '1101': 'https://safe-transaction-zkevm.safe.global',
+  '2442': 'https://safe-transaction-zkevm.safe.global', // Added Polygon zkEVM Cardona Testnet
   '8453': 'https://safe-transaction-base.safe.global',
   '42161': 'https://safe-transaction-arbitrum.safe.global',
   '42220': 'https://safe-transaction-celo.safe.global',

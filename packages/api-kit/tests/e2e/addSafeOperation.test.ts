@@ -19,7 +19,7 @@ const SAFE_ADDRESS = '0x60C4Ab82D06Fd7dFE9517e17736C2Dcc77443EF0' // 1/2 Safe (v
 const PAYMASTER_TOKEN_ADDRESS = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238'
 const PAYMASTER_ADDRESS = '0x0000000000325602a77416A16136FDafd04b299f'
 const BUNDLER_URL = `https://bundler.url`
-const TX_SERVICE_URL = 'https://safe-transaction-sepolia.staging.5afe.dev/api'
+const TX_SERVICE_URL = 'https://safe-transaction-zkevm.safe.global/api'
 
 let safeApiKit: SafeApiKit
 let protocolKit: Safe

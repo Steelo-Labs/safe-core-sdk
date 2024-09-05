@@ -164,6 +164,9 @@ class SafeFactory {
       isL1SafeSingleton: this.#isL1SafeSingleton,
       contractNetworks: this.#contractNetworks
     })
+    console.log('Your Safe has been deployed:')
+    console.log(`https://testnet-zkevm.polygonscan.com/address/${safeAddress}`)
+    console.log(`https://app.safe.global/gor:${safeAddress}`)
     return safe
   }
 }

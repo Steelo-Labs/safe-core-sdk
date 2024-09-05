@@ -7,7 +7,7 @@ chai.use(chaiAsPromised)
 
 let safeApiKit: SafeApiKit
 
-const TX_SERVICE_URL = 'https://safe-transaction-sepolia.staging.5afe.dev/api'
+const TX_SERVICE_URL = 'https://safe-transaction-zkevm.safe.global/api'
 const SAFE_OPERATION_HASH = '0x375d3bd580600ce04d7d2c1d8d88d85f27b9c7d14d7b544f2ee585d672f2b449'
 const EXPECTED_SAFE_OPERATION_CONFIRMATIONS = [
   {

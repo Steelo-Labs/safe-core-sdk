@@ -4,6 +4,7 @@ const MAINNET_CHAIN_ID = '0x1'
 const POLYGON_CHAIN_ID = '0x89'
 const BSC_MAINNET_CHAIN_ID = '0x38'
 const AVALANCHE_MAINNET_CHAIN_ID = '0xa86a'
+const CARDONA_CHAIN_ID = '0x14a34'
 const XDAI_CHAIN_ID = '0x64'
 const ARBITRUM_MAINNET_CHAIN_ID = '0xa4b1'
 const OPTIMISM_MAINNET_CHAIN_ID = '0xa'
@@ -29,6 +30,14 @@ export const CHAIN_CONFIG: Record<string, Partial<SafeAuthProviderConfig>> = {
     blockExplorerUrl: 'https://polygonscan.com',
     chainId: POLYGON_CHAIN_ID,
     displayName: 'Polygon Mainnet',
+    logo: 'matic-network-logo.svg',
+    ticker: 'MATIC',
+    tickerName: 'Matic Network Token'
+  },
+  [CARDONA_CHAIN_ID]: {
+    blockExplorerUrl: 'https://cardona-zkevm.polygonscan.com',
+    chainId: CARDONA_CHAIN_ID,
+    displayName: 'Polygon zkEVM Cardona',
     logo: 'matic-network-logo.svg',
     ticker: 'MATIC',
     tickerName: 'Matic Network Token'

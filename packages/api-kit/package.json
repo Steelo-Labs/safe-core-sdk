@@ -29,8 +29,8 @@
     "type": "git",
     "url": "git+https://github.com/safe-global/safe-core-sdk.git"
   },
-  "author": "Safe (https://safe.global)",
-  "license": "MIT",
+  "author": "Steelo Labts Ltd.",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/safe-global/safe-core-sdk/issues"
   },

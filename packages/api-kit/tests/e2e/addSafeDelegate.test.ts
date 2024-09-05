@@ -15,7 +15,7 @@ let signer: Signer
 
 describe('addSafeDelegate', () => {
   before(async () => {
-    safeApiKit = getApiKit('https://safe-transaction-sepolia.staging.5afe.dev/api')
+    safeApiKit = getApiKit('https://safe-transaction-zkevm.safe.global/api')
     signer = new ethers.Wallet(PRIVATE_KEY_1)
   })
 

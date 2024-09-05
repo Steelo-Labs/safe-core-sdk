@@ -38,7 +38,10 @@ const AuthProvider = ({ children }: AuthContextProviderProps) => {
       const options: SafeAuthInitOptions = {
         enableLogging: true,
         showWidgetButton: false,
-        chainConfig: { chainId: '0xaa36a7', rpcTarget: 'https://sepolia.gateway.tenderly.co' }
+        chainConfig: {
+          chainId: '0xaa36a7',
+          rpcTarget: 'https://polygonzkevm-cardona.g.alchemy.com'
+        }
       }
 
       await authPack.init(options)

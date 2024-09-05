@@ -18,7 +18,7 @@ interface Config {
 }
 
 const config: Config = {
-  RPC_URL: 'https://sepolia.gateway.tenderly.co',
+  RPC_URL: 'https://polygonzkevm-cardona.g.alchemy.com',
   SIGNER_ADDRESS_PRIVATE_KEY: SIGNER_ADDRESS_PRIVATE_KEY!,
   SAFE_ADDRESS: '<SAFE_ADDRESS>'
 }
@@ -78,7 +78,7 @@ async function main() {
     return
   }
 
-  console.log('Succesfully executed the transaction:')
+  console.log('Successfully executed the transaction:')
   console.log(' - Tx hash: ', result.hash)
 }
 

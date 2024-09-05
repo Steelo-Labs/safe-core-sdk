@@ -7,15 +7,15 @@ const OWNER_1_PRIVATE_KEY = ''
 const OWNER_2_PRIVATE_KEY = ''
 const PIMLICO_API_KEY = ''
 const SAFE_ADDRESS = '' // Safe 2/N
-const CHAIN_NAME = 'sepolia'
+const CHAIN_NAME = 'cardona'
 
 // Constants
 const BUNDLER_URL = `https://api.pimlico.io/v2/${CHAIN_NAME}/rpc?apikey=${PIMLICO_API_KEY}`
 const PAYMASTER_URL = `https://api.pimlico.io/v2/${CHAIN_NAME}/rpc?apikey=${PIMLICO_API_KEY}`
-const RPC_URL = 'https://sepolia.gateway.tenderly.co'
-const PAYMASTER_ADDRESS = '0x0000000000325602a77416A16136FDafd04b299f' // SEPOLIA
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com'
+const PAYMASTER_ADDRESS = '0x0000000000325602a77416A16136FDafd04b299f' // CARDONA
 
-const CHAIN_ID = 11155111n
+const CHAIN_ID = 2442n
 
 async function main() {
   const apiKit = new SafeApiKit({

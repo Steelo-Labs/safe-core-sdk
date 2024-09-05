@@ -13,14 +13,14 @@ const OWNER_3_ADDRESS = ''
 const THRESHOLD = 3
 const SALT_NONCE = ''
 
-const RPC_URL = 'https://sepolia.gateway.tenderly.co'
-const usdcTokenAddress = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238' // SEPOLIA
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com'
+const usdcTokenAddress = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238' // @Ezra -> TO CHECK
 const usdcAmount = 10_000n // 0.01 USDC
 
 // Paymaster URL
 const PIMLICO_API_KEY = ''
-const PAYMASTER_URL = `https://api.pimlico.io/v2/sepolia/rpc?apikey=${PIMLICO_API_KEY}` // PIMLICO
-const BUNDLER_URL = `https://api.pimlico.io/v2/sepolia/rpc?apikey=${PIMLICO_API_KEY}`
+const PAYMASTER_URL = `https://api.pimlico.io/v2/cardona/rpc?apikey=${PIMLICO_API_KEY}` // @Ezra -> TO CHECK
+const BUNDLER_URL = `https://api.pimlico.io/v2/cardona/rpc?apikey=${PIMLICO_API_KEY}` // @Ezra -> TO CHECK
 
 async function send(): Promise<SafeClientResult> {
   const safeClient = await createSafeClient({

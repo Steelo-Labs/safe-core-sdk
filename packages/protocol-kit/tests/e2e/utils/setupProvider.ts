@@ -6,7 +6,7 @@ import { custom, createWalletClient } from 'viem'
 import { SafeProvider } from '@safe-global/protocol-kit/index'
 import { Eip1193Provider } from '@safe-global/protocol-kit/types'
 
-type Network = 'mainnet' | 'gnosis' | 'zksync' | 'goerli' | 'sepolia'
+type Network = 'mainnet' | 'gnosis' | 'zksync' | 'goerli' | 'sepolia' | 'cardona'
 
 export function getEip1193Provider(): Eip1193Provider {
   switch (process.env.ETH_LIB) {
@@ -55,6 +55,9 @@ export function getSafeProviderFromNetwork(
       break
     case 'mainnet':
       rpcUrl = 'https://rpc.ankr.com/eth'
+      break
+    case 'cardona':
+      rpcUrl = 'https://polygonzkevm-cardona.g.alchemy.com'
       break
     default:
       throw new Error('Chain not supported')

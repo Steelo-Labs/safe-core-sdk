@@ -19,7 +19,7 @@ describe('getSafeDelegates', () => {
   const safeAddress = '0xF8ef84392f7542576F6b9d1b140334144930Ac78'
 
   before(async () => {
-    safeApiKit = getApiKit('https://safe-transaction-sepolia.staging.5afe.dev/api')
+    safeApiKit = getApiKit('https://safe-transaction-zkevm.safe.global/api')
     signer = new ethers.Wallet(PRIVATE_KEY)
   })
 

@@ -316,7 +316,7 @@ describe('Safe contracts', () => {
 
     it('should return an external provider (JsonRpcProvider) and signer (AbstractSigner) when using a private key', async () => {
       const safeProvider = new SafeProvider({
-        provider: 'https://sepolia.gateway.tenderly.co',
+        provider: 'https://polygonzkevm-cardona.g.alchemy.com',
         signer: '4ff03ace1395691975678c93449d552dc83df6b773a8024d4c368b39042a7610'
       })
 
@@ -326,7 +326,7 @@ describe('Safe contracts', () => {
 
     it('should return an undefined signer when using an RPC without signer', async () => {
       const safeProvider = new SafeProvider({
-        provider: 'https://sepolia.gateway.tenderly.co'
+        provider: 'https://polygonzkevm-cardona.g.alchemy.com'
       })
 
       chai.expect(safeProvider.getExternalProvider()).to.be.instanceOf(JsonRpcProvider)

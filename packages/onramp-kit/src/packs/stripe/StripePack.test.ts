@@ -32,8 +32,8 @@ const session: StripeSession = {
     lock_wallet_address: true,
     source_currency: null,
     source_exchange_amount: null,
-    supported_destination_currencies: ['btc', 'eth', 'sol', 'usdc'],
-    supported_destination_networks: ['ethereum', 'polygon'],
+    supported_destination_currencies: ['btc', 'eth', 'sol', 'usdc', 'stlo'],
+    supported_destination_networks: ['ethereum', 'polygon', 'cardona'],
     transaction_id: null,
     wallet_address: '0xD725e11588f040d86c4C49d8236E32A5868549F0',
     wallet_addresses: null

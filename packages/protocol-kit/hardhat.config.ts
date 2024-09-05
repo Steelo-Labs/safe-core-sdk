@@ -15,7 +15,7 @@ yargs
   .version(false).argv
 
 dotenv.config()
-const { MNEMONIC, PK } = process.env
+const { MNEMONIC, PK, POLYGON_ZKEVM_RPC_URL } = process.env
 const DEFAULT_MNEMONIC =
   'myth like bonus scare over problem client lizard pioneer submit female collect'
 
@@ -110,12 +110,11 @@ const config: HardhatUserConfig = {
         }
       ]
     },
-    sepolia: {
-      ...sharedNetworkConfig,
-      url: 'https://sepolia.gateway.tenderly.co'
+    polygon_zkevm_testnet: {
+      url: POLYGON_ZKEVM_RPC_URL || 'https://polygonzkevm-cardona.g.alchemy.com',
+      ...sharedNetworkConfig
     }
   },
-  //@ts-expect-error Type not found
   compilerOptions: {
     paths: { '^@safe-global/protocol-kit/(.*)$': ['../protocol-kit/src/*'] }
   },

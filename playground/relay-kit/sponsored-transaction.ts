@@ -15,7 +15,7 @@ import { ethers } from 'ethers'
 // https://relay.gelato.digital/tasks/status/<TASK_ID>
 
 // Check the status of a transaction after it is executed:
-// https://sepolia.etherscan.io/tx/<TRANSACTION_HASH>
+// https://cardona-zkevm.polygonscan.com/tx/<TRANSACTION_HASH>
 
 const config = {
   SAFE_SIGNER_PRIVATE_KEY: '<SAFE_SIGNER_PRIVATE_KEY>',
@@ -23,7 +23,7 @@ const config = {
   RELAY_API_KEY: '<GELATO_RELAY_API_KEY>'
 }
 
-const RPC_URL = 'https://sepolia.gateway.tenderly.co'
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com'
 
 const mockOnRampConfig = {
   ADDRESS: '<ADDRESS>',

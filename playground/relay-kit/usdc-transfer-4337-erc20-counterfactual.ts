@@ -10,23 +10,23 @@ const PIMLICO_API_KEY = ''
 const OWNER_ADDRESS = ''
 
 // CHAIN
-const CHAIN_NAME = 'sepolia'
+const CHAIN_NAME = 'cardona'
 // const CHAIN_NAME = 'gnosis'
 
 // RPC URL
-const RPC_URL = 'https://sepolia.gateway.tenderly.co' // SEPOLIA
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com' // POLYGON CARDONA
 // const RPC_URL = 'https://rpc.gnosischain.com/' // GNOSIS
 
 // Bundler URL
 const BUNDLER_URL = `https://api.pimlico.io/v2/${CHAIN_NAME}/rpc?apikey=${PIMLICO_API_KEY}` // PIMLICO
 
 // PAYMASTER ADDRESS
-const paymasterAddress = '0x0000000000325602a77416A16136FDafd04b299f' // SEPOLIA
+const paymasterAddress = '0x0000000000325602a77416A16136FDafd04b299f' // POLYGON CARDONA
 // const paymasterAddress = '0x000000000034B78bfe02Be30AE4D324c8702803d' // GNOSIS
 
-// USDC CONTRACT ADDRESS IN SEPOLIA
+// USDC CONTRACT ADDRESS IN POLYGON CARDONA
 // faucet: https://faucet.circle.com/
-const usdcTokenAddress = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238' // SEPOLIA
+const usdcTokenAddress = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238' // POLYGON CARDONA
 // const usdcTokenAddress = '0xddafbb505ad214d7b80b1f830fccc89b60fb7a83' // GNOSIS
 
 async function main() {

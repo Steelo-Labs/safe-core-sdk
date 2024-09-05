@@ -619,6 +619,7 @@ describe('Contract utils', () => {
         const zkSyncSafeProvider = getSafeProviderFromNetwork('zksync')
         const sepoliaSafeProvider = getSafeProviderFromNetwork('sepolia')
         const mainnetSafeProvider = getSafeProviderFromNetwork('mainnet')
+        const cardonaSafeProvider = getSafeProviderFromNetwork('cardona')
 
         // 1/1 Safe
         const safeAccountConfig: SafeAccountConfig = {
@@ -651,6 +652,13 @@ describe('Contract utils', () => {
           safeDeploymentConfig: safeDeploymentConfig
         })
 
+        const cardonaPredictedSafeAddress = await predictSafeAddress({
+          safeProvider: cardonaSafeProvider,
+          chainId: await cardonaSafeProvider.getChainId(),
+          safeAccountConfig: safeAccountConfig,
+          safeDeploymentConfig: safeDeploymentConfig
+        })
+
         const mainnetPredictedSafeAddress = await predictSafeAddress({
           safeProvider: mainnetSafeProvider,
           chainId: await mainnetSafeProvider.getChainId(),
@@ -662,12 +670,14 @@ describe('Contract utils', () => {
         const expectedSkSyncSafeAddress = '0x4680B7AC23A98d5D68c21e3d6F8cBC9576A5920A'
         const expectedSepoliaSafeAddress = '0x643bD5C3Fd6c546c1452A16f978C350F8a0A2a8D'
         const expectedMainnetSafeAddress = '0x22b257EABfA3B8BC9e0C5f6BA03400933834675B'
+        const expectedCardonaSafeAddress = '0x4680B7AC23A98d5D68c21e3d6F8cBC9576A5920A' // @Ezra: To review address
 
         // returns the correct predicted address for each chain
         chai.expect(gnosisPredictedSafeAddress).to.be.equal(expectedGnosisSafeAddress)
         chai.expect(zkSyncPredictedSafeAddress).to.be.equal(expectedSkSyncSafeAddress)
         chai.expect(sepoliaPredictedSafeAddress).to.be.equal(expectedSepoliaSafeAddress)
         chai.expect(mainnetPredictedSafeAddress).to.be.equal(expectedMainnetSafeAddress)
+        chai.expect(cardonaPredictedSafeAddress).to.be.equal(expectedCardonaSafeAddress)
       }
     )
   })

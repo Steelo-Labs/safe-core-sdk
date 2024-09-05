@@ -17,7 +17,7 @@ interface Config {
 //   - Owner 2: public address from OWNER2_PRIVATE_KEY
 //   - Owner 3: SIGNER_SAFE_ADDRESS (1/1 with OWNER1_PRIVATE_KEY public address as owner)
 const config: Config = {
-  RPC_URL: 'https://sepolia.gateway.tenderly.co',
+  RPC_URL: 'https://polygonzkevm-cardona.g.alchemy.com', // Updated to Polygon zkEVM Cardona testnet RPC URL
   OWNER1_PRIVATE_KEY: '<OWNER1_PRIVATE_KEY>',
   OWNER2_PRIVATE_KEY: '<OWNER2_PRIVATE_KEY>',
   SIGNER_SAFE_ADDRESS: '<SIGNER_SAFE_ADDRESS>',
@@ -31,7 +31,7 @@ async function main() {
     signer: config.OWNER1_PRIVATE_KEY,
     safeAddress: config.SAFE_3_3_ADDRESS
   })
-
+  
   const MESSAGE = 'I am the owner of this Safe account'
 
   let message = protocolKit.createMessage(MESSAGE)

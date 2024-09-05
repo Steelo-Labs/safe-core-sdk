@@ -279,6 +279,8 @@ describe('SafeMoneriumClient', () => {
     protocolKit.getChainId = jest.fn().mockResolvedValueOnce(80001n)
     expect(await safeMoneriumClient.getChain()).toBe('polygon')
     protocolKit.getChainId = jest.fn().mockResolvedValueOnce(300n)
+    expect(await safeMoneriumClient.getChain()).toBe('polygon')
+    protocolKit.getChainId = jest.fn().mockResolvedValueOnce(2442n)
     expect(safeMoneriumClient.getChain()).rejects.toThrow('Chain not supported: 300')
   })
 
@@ -289,6 +291,8 @@ describe('SafeMoneriumClient', () => {
     expect(await safeMoneriumClient.getNetwork()).toBe('sepolia')
     protocolKit.getChainId = jest.fn().mockResolvedValueOnce(100n)
     expect(await safeMoneriumClient.getNetwork()).toBe('mainnet')
+    protocolKit.getChainId = jest.fn().mockResolvedValueOnce(2442n)
+    expect(await safeMoneriumClient.getNetwork()).toBe('cardona')
     protocolKit.getChainId = jest.fn().mockResolvedValueOnce(10200n)
     expect(await safeMoneriumClient.getNetwork()).toBe('chiado')
     protocolKit.getChainId = jest.fn().mockResolvedValueOnce(137n)

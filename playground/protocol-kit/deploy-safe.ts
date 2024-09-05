@@ -15,7 +15,7 @@ interface Config {
 }
 
 const config: Config = {
-  RPC_URL: 'https://sepolia.gateway.tenderly.co',
+  RPC_URL: 'https://polygonzkevm-cardona.g.alchemy.com', // Updated to Polygon zkEVM Cardona testnet RPC URL
   DEPLOYER_ADDRESS_PRIVATE_KEY: '<DEPLOYER_ADDRESS_PRIVATE_KEY>',
   DEPLOY_SAFE: {
     OWNERS: ['OWNER_ADDRESS'],
@@ -64,6 +64,7 @@ async function main() {
   })
 
   console.log('Deployed Safe:', await safe.getAddress())
+  console.log('Explorer URL:', `https://cardona-zkevm.polygonscan.com/address/${await safe.getAddress()}`)
 }
 
 main()

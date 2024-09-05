@@ -11,7 +11,7 @@ const OWNER_3_ADDRESS = ''
 const THRESHOLD = 3
 const SALT_NONCE = ''
 
-const RPC_URL = 'https://sepolia.gateway.tenderly.co'
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com'
 const MESSAGE = "I'm the owner of this Safe"
 // const MESSAGE = {
 //   types: {

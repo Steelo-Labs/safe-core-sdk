@@ -7,7 +7,7 @@ import { getApiKit } from '../utils/setupKits'
 chai.use(chaiAsPromised)
 
 const SAFE_ADDRESS = '0x60C4Ab82D06Fd7dFE9517e17736C2Dcc77443EF0' // v1.4.1
-const TX_SERVICE_URL = 'https://safe-transaction-sepolia.staging.5afe.dev/api'
+const TX_SERVICE_URL = 'https://safe-transaction-zkevm.safe.global/api'
 
 let safeApiKit: SafeApiKit
 

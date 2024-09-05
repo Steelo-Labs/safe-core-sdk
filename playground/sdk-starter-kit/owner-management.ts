@@ -4,7 +4,7 @@ const OWNER_1_PRIVATE_KEY = ''
 const OWNER_2_PRIVATE_KEY = ''
 const OWNER_2_ADDRESS = ''
 
-const RPC_URL = 'https://sepolia.gateway.tenderly.co'
+const RPC_URL = 'https://polygonzkevm-cardona.g.alchemy.com'
 const SAFE_ADDRESS = ''
 
 async function addOwner() {

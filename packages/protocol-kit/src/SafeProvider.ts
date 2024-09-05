@@ -186,8 +186,18 @@ class SafeProvider {
     return this.#externalProvider.getTransactionCount(address, blockTag)
   }
 
+  // @Ezra - Key point of focus, logging to ensure chainId is correct
   async getChainId(): Promise<bigint> {
-    return (await this.#externalProvider.getNetwork()).chainId
+    const network = await this.#externalProvider.getNetwork()
+    const chainId = network.chainId
+    console.log('Chain ID:', chainId.toString())
+    // Polygon zkEVM Cardona testnet chainId
+    if (chainId.toString() !== '2442') {
+      throw new Error(
+        'Unsupported network. Please connect to Polygon zkEVM Cardona testnet (Chain ID: 2442)'
+      )
+    }
+    return chainId
   }
 
   getChecksummedAddress(address: string): string {
